@@ -1,0 +1,7 @@
+Ingreso al sistema:
+
+Usuario: admin
+Contraseña: admin
+
+Usuario: juan
+Contraseña: juan
