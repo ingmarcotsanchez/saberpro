@@ -4,6 +4,7 @@ class ControladorPruebas{
 	/*Mostrar pruebas*/
 	static public function ctrMostrarPruebas($item, $valor, $orden){
 		$tabla = "prueba";
+		//var_dump($orden);
         $respuesta = ModeloPruebas::mdlMostrarPruebas($tabla, $item, $valor, $orden);
 		//var_dump($respuesta);
 		return $respuesta;

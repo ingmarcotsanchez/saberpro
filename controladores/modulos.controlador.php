@@ -1,10 +1,10 @@
 <?php
-//session_start();
+session_start();
 class ControladorModulos{
 	/*Mostrar modulos*/
 	static public function ctrMostrarModulos($item, $valor, $orden){
 		$tabla = "modulos";
-		if($_SESSION["id_programa" != 0]){
+		if($_SESSION["id_programa"] != 0){
 			$respuesta = ModeloModulos::mdlMostrarModulosPrograma($tabla, $item, $valor, $orden);
 		}else{
 			$respuesta = ModeloModulos::mdlMostrarModulos($tabla, $item, $valor, $orden);

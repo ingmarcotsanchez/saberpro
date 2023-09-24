@@ -67,6 +67,7 @@ $("#nuevaCompetencia").change(function(){
        processData: false,
        dataType:"json",
        success:function(respuesta){
+		//console.log(respuesta);
        	if(!respuesta){
        		var nuevoCodigo = idCompetencia+"01";
        		$("#nuevoCodigo").val(nuevoCodigo);

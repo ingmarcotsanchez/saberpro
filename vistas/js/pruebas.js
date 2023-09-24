@@ -6,7 +6,7 @@ $.ajax({
 	}
 })
 var perfilOculto = $("#perfilOculto").val();
-$('.tablaPruebas').DataTable( {
+$('.tablaPrueba').DataTable( {
     "ajax": "ajax/datatable-pruebas.ajax.php?perfilOculto="+perfilOculto,
     "aProcessing": true,
         "aServerSide": true,

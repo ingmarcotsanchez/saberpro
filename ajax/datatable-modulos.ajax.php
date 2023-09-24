@@ -31,9 +31,11 @@ class TablaModulos{
 			for($i = 0; $i < count($modulos); $i++){
 				$item = "id";
 				$valor = $modulos[$i]["id_competencia"];
+
+				
 				$orden = "id";
 				$competencias = ControladorCompetencias::ctrMostrarCompetencias($item, $valor);
-				$programas = ControladorProgramas::ctrMostrarProgramas($item, $valor,$orden);
+				$programas = ControladorProgramas::ctrMostrarProgramas($item, $modulos[$i]["id_programa"],$orden);
 				if($modulos[$i]["puntaje"] <= 125){
 				$puntaje = "<button type='button' class='btn btn-danger open_modal' data-toggle='modal' data-target='ModalModule{$modulos[$i]["id"]}'>".
 								$modulos[$i]["puntaje"].

@@ -54,13 +54,15 @@ session_start();
                         <div class="form-group">
                             <div class="input-group">
                                 <span class="input-group-addon"><i class="fa fa-th"></i></span> 
+                                
                                 <select class="form-control input-lg" id="nuevaPrueba" name="nuevaPrueba" required>
                                 <option value="">Selecionar Prueba</option>
                                 <?php
                                     $item = null;
                                     $valor = null;
-                                    $orden = null;
+                                    $orden = "id";
                                     $pruebas = ControladorPruebas::ctrMostrarPruebas($item, $valor,$orden);
+                                    //var_dump($pruebas);
                                     foreach ($pruebas as $key => $value) {
                                         echo '<option value="'.$value["id"].'">'.$value["descripcion"].'</option>';
                                     }

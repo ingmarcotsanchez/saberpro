@@ -21,10 +21,10 @@ class TablaCaracteristicas{
 		  	"data": [';
 			for($i = 0; $i < count($caracteristicas); $i++){
 		  		$item = "id";
-				  $valor = $caracteristicas[$i]["id_modulo"];
+				  $valor = $caracteristicas[$i]["id_prueba"];
 		  		//$valor = $caracteristicas[$i]["puntaje_inicial"];
 				$orden = "id";
-		  		$modulos = ControladorPruebas::ctrMostrarPruebas($item, $valor, $orden);
+		  		$pruebas = ControladorPruebas::ctrMostrarPruebas($item, $valor, $orden);
 				if(isset($_GET["perfilOculto"]) && $_GET["perfilOculto"] == "Lider"){
 					$botones =  "<div class='btn-group'><button class='btn btn-warning btnEditarCaracteristica' idCaracteristica='".$caracteristicas[$i]["id"]."' data-toggle='modal' data-target='#modalEditarCaracteristica'><i class='fa fa-pencil'></i></button></div>"; 
 				}else{
@@ -36,7 +36,7 @@ class TablaCaracteristicas{
 				//$texto = str_replace(":", "", $caracteristicas[$i]["caracteristica"]);
 				$datosJson .='[
 			    	"'.($i+1).'",
-					"'.utf8_encode($modulos["descripcion"]).'",
+					"'.utf8_encode($pruebas["descripcion"]).'",
 					"'.$caracteristicas[$i]["puntaje_inicial"].'",
 					"'.$caracteristicas[$i]["puntaje_final"].'",
 					"'.$caracteristicas[$i]["nivel"].'",
