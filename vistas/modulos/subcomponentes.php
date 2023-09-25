@@ -1,5 +1,5 @@
 <?php
-if($_SESSION["perfil"] == "Lider"){
+if($_SESSION["perfil"] == "profesor"){
   echo '<script>
             window.location = "inicio";
         </script>';
